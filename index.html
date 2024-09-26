@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Projection Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .blob {
+            position: absolute;
+            border-radius: 70%;
+            opacity: 0.8;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(20px, -40px) scale(1.1);
+            }
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+        
+        .blob1 { background: rgba(255, 0, 0, 0.7); width: 500px; height: 500px; top: 10%; left: 20%; }
+        .blob2 { background: rgba(0, 255, 0, 0.7); width: 300px; height: 300px; top: 30%; left: 60%; animation-delay: 1s; }
+        .blob3 { background: rgba(0, 0, 255, 0.7); width: 600px; height: 600px; top: 60%; left: 30%; animation-delay: 2s; }
+        .blob4 { background: rgba(255, 255, 0, 0.7); width: 400px; height: 400px; top: 70%; left: 70%; animation-delay: 3s; }
+        .blob5 { background: rgba(255, 165, 0, 0.7); width: 300px; height: 300px; top: 40%; left: 10%; animation-delay: 4s; }
+    </style>
+</head>
+<body>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="blob blob4"></div>
+    <div class="blob blob5"></div>
+</body>
+</html>
